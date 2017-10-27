@@ -23,7 +23,7 @@ public class HomeController {
 		
 		model.addAttribute("comment", new Comment());
 		model.addAttribute("allComments", (List<Comment>)commentRepository.findAll());
-		return "index";
+		return "login";
 	}
 	
 	@PostMapping(value = {"/", "/login"})
@@ -33,7 +33,7 @@ public class HomeController {
 		commentRepository.save(comment);  // save to the database
 		
 		model.addAttribute("allComments", (List<Comment>)commentRepository.findAll());
-		return "redirect:/index"; // redirects
+		return "redirect:/login"; // redirects
 	}
 
 }
