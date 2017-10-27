@@ -1,0 +1,8 @@
+
+button:active{
+    background:olive;
+}
+
+button:focus{
+    background:olive;
+}
