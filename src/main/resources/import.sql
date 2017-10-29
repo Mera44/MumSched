@@ -8,7 +8,6 @@ INSERT INTO user_profile (id, birthdate, email, first_name, is_active, last_name
 INSERT INTO user_profile (id, birthdate, email, first_name, is_active, last_name, password, user_name, user_status) VALUES (17,'1950-10-02','assaad@mum.edu','Assaad',0,'Assaad','$2a$10$/TFbW3PF.sAYMjQjegeaHOJ/bPgUhfEDXeFuC3NuP8rH3wzyEd4Qm','assaad','Active');
 INSERT INTO user_profile (id, birthdate, email, first_name, is_active, last_name, password, user_name, user_status) VALUES (19,'1960-10-03','loo@mum.edu','Habete',0,'Chung','$2a$10$0gATt1asVpVvI2QpR/dB.eG8S55mF.L8x7w8q1AZVrRWmx92j/WSS','habete','Active');
 INSERT INTO user_profile (id, birthdate, email, first_name, is_active, last_name, password, user_name, user_status) VALUES (20,'1950-10-02','brune@mum.edu','Brune',0,'Brune','$2a$10$Of2LeD5/T2vAvwKDjZPjrOtb2Mh62MKqTI5WY3yNLs2uFVBdj0kAK','brune1','Active');
-
 INSERT INTO user_profile (id, birthdate, email, first_name, is_active, last_name, password, user_name, user_status) VALUES (23,'1945-10-26','mainLee@mum.edu','MainLee',0,'Leeeeeee','$2a$10$Tugd6udIg3OQjq22o08HPOlACBsNUW95ieEYEyxnsoJiL90gcPD1i','mainLee','Active');
 INSERT INTO user_profile (id, birthdate, email, first_name, is_active, last_name, password, user_name, user_status) VALUES (24,'1990-02-07','renuka@mum.edu','Renuka',0,'Renuka','$2a$10$IsYaAqYuF/nMyNq7zkV2Wef0n51xLcTgpmUk4bqMoF7GZ4kCF3802','renuka',NULL);
 INSERT INTO user_profile (id, birthdate, email, first_name, is_active, last_name, password, user_name, user_status) VALUES (25,'1950-10-02','brune@mum.edu','Brune',0,'Brune','$2a$10$RRkiFBk76Y1ZKw4MKuSLZeSOXx3OvBkcAbZmmv/VZ0Mj//rDxShEy','brune',NULL);
@@ -59,32 +58,75 @@ INSERT INTO block (id, block_end_date, block_month, block_start_date, entry_id, 
 
 -- INSERT INTO schedule (id,generated_date,status,entry_id)VALUES(1,'1999-09-09 00:00:00','OK',1);
 -- 
-INSERT   INTO course VALUES (1,395,'fundamental programming practices','FPP',1);
-INSERT   INTO course VALUES (2,401,'Modern programming practices','MPP',1);
-INSERT   INTO course VALUES (3,475,'Web application programming ','WAP',1);
-INSERT   INTO course VALUES (4,504,'Alogorithm','Algorithm',1);
-INSERT   INTO course VALUES (5,300,'Science of Creative Intelligence','SCI',0);
-INSERT   INTO course VALUES (6,572,'Modern Web Application','MWA',0);
-INSERT   INTO course VALUES (7,522,'Big Data','BIGData',0);
-INSERT   INTO course VALUES (8,544,'Enterprise Architecture','EA',0);
-INSERT   INTO course VALUES (9,425,'Software Engineering','SWE',1);
-INSERT   INTO course VALUES (10,525,'Advanced Software Development','ASD',0);
-INSERT   INTO course VALUES (11,545,'Web Application Architecture','WAA',0);
+INSERT   INTO course  (id,course_code,
+course_desc,
+course_name,
+is_pre_req) VALUES (1,395,'fundamental programming practices','FPP',1);
+INSERT   INTO course   (id,
+course_code,
+course_desc,
+course_name,
+is_pre_req) VALUES (2,401,'Modern programming practices','MPP',1);
+INSERT   INTO course   (id,
+course_code,
+course_desc,
+course_name,
+is_pre_req) VALUES (3,475,'Web application programming ','WAP',1);
+INSERT   INTO course   (id,
+course_code,
+course_desc,
+course_name,
+is_pre_req) VALUES (4,504,'Alogorithm','Algorithm',1);
+INSERT   INTO course   (id,
+course_code,
+course_desc,
+course_name,
+is_pre_req) VALUES (5,300,'Science of Creative Intelligence','SCI',0);
+INSERT   INTO course   (id,
+course_code,
+course_desc,
+course_name,
+is_pre_req) VALUES (6,572,'Modern Web Application','MWA',0);
+INSERT   INTO course   (id,
+course_code,
+course_desc,
+course_name,
+is_pre_req) VALUES (7,522,'Big Data','BIGData',0);
+INSERT   INTO course   (id,
+course_code,
+course_desc,
+course_name,
+is_pre_req) VALUES (8,544,'Enterprise Architecture','EA',0);
+INSERT   INTO course   (id,
+course_code,
+course_desc,
+course_name,
+is_pre_req) VALUES (9,425,'Software Engineering','SWE',1);
+INSERT   INTO course   (i,
+course_code,
+course_desc,
+course_name,
+is_pre_req) VALUES (10,525,'Advanced Software Development','ASD',0);
+INSERT   INTO course   (id,
+course_code,
+course_desc,
+course_name,
+is_pre_req) VALUES (11,545,'Web Application Architecture','WAA',0);
 
 
-INSERT   INTO course_pre_req_course VALUES (2,1);
-INSERT   INTO course_pre_req_course VALUES (3,2);
-INSERT   INTO course_pre_req_course VALUES (4,2);
-INSERT   INTO course_pre_req_course VALUES (6,2);
-INSERT   INTO course_pre_req_course VALUES (6,3);
-INSERT   INTO course_pre_req_course VALUES (7,2);
-INSERT   INTO course_pre_req_course VALUES (7,4);
-INSERT   INTO course_pre_req_course VALUES (8,2);
-INSERT   INTO course_pre_req_course VALUES (8,3);
-INSERT   INTO course_pre_req_course VALUES (9,2);
-INSERT   INTO course_pre_req_course VALUES (10,2);
-INSERT   INTO course_pre_req_course VALUES (11,2);
-INSERT   INTO course_pre_req_course VALUES (11,3);
+INSERT   INTO course_pre_req_course (course_id,prerequisite_id) VALUES (2,1);
+INSERT   INTO course_pre_req_course (course_id,prerequisite_id) VALUES (3,2);
+INSERT   INTO course_pre_req_course (course_id,prerequisite_id) VALUES (4,2);
+INSERT   INTO course_pre_req_course (course_id,prerequisite_id) VALUES (6,2);
+INSERT   INTO course_pre_req_course (course_id,prerequisite_id) VALUES (6,3);
+INSERT   INTO course_pre_req_course (course_id,prerequisite_id) VALUES (7,2);
+INSERT   INTO course_pre_req_course (course_id,prerequisite_id) VALUES (7,4);
+INSERT   INTO course_pre_req_course (course_id,prerequisite_id) VALUES (8,2);
+INSERT   INTO course_pre_req_course (course_id,prerequisite_id) VALUES (8,3);
+INSERT   INTO course_pre_req_course (course_id,prerequisite_id) VALUES (9,2);
+INSERT   INTO course_pre_req_course (course_id,prerequisite_id) VALUES (10,2);
+INSERT   INTO course_pre_req_course (course_id,prerequisite_id) VALUES (11,2);
+INSERT   INTO course_pre_req_course (course_id,prerequisite_id) VALUES (11,3);
 
 
 
